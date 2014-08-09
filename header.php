@@ -29,21 +29,22 @@ if (!defined('ABSPATH')) {
 <!--[if IE 9 ]>
 <html class="no-js ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html ng-app="vooelaWeb" class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
     <head>
 
         <meta charset="<?php bloginfo('charset'); ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title><?php wp_title('&#124;', true, 'right'); ?></title>
-
+        <script type="text/javascript" src="/app/lib/angular.min.js"
+        <script src="/app/src/app.js" type="text/javascript"></script>
         <link rel="profile" href="http://gmpg.org/xfn/11"/>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
 
         <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?>>
+    <body ng-controller="mainCtrl" <?php body_class(); ?>>
 
         <?php responsive_container(); // before container hook  ?>
         <div id="container" class="hfeed">
