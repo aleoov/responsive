@@ -1,4 +1,7 @@
 angular.module('vooelaWeb',[])
-        .controller('mainCtrl',['',function(){
-            console.log("test");
+        .controller('mainCtrl',['',function($scope){
+                $scope.printConsole = function(){
+                    console.log("test");
+                };
+            
         }]);
