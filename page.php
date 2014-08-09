@@ -47,11 +47,6 @@ get_header(); ?>
 				<?php responsive_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
 			<?php responsive_entry_after(); ?>
-
-			<?php responsive_comments_before(); ?>
-			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
-
 		<?php
 		endwhile;
 
